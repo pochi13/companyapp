@@ -44,6 +44,7 @@ class ApplicationsController < ApplicationController
       redirect_to applications_path,notice: "削除完了しました" 
    end
   end
+  
 
 
 
