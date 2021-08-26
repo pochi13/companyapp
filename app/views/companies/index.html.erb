@@ -1,8 +1,11 @@
+<%= notice %>
+
 <%= "病院一覧画面" %>
 
 <div class = container>
 
 <% @companies.each do |company|%>
+<%= image_tag "1.png" %><br>
 <%= link_to company.name,company_path(company.id) %><br>
 <%= company.introduce %><br>
 <% end %>
