@@ -20,18 +20,21 @@ class ApplicationsController < ApplicationController
       render :new, alert: "送信できませんでした"
     end
   end
+
+
   
     
   def edit
     @application = Application.find(params[:id])
+    @company_id = params[:x]
   end
 
   def update
-    @application = Application.new(application_params)
-    if @application.update
+    application = Application.find(params[:id])
+    if application.update(application_params)
       redirect_to applications_path,notice: "更新完了しました"
     else
-      render :new, alert: "更新できませんでした"
+      render :edit, alert: "更新できませんでした"
     end
   end
 

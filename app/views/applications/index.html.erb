@@ -1,7 +1,9 @@
-投稿完了しました
+<%= "投稿一覧画面" %>
+
+<h2>投稿完了しました</h2>
 
 <% @applications.each do |application| %>
   <%= application.title %><br>
   <%= application.reason %><br>
-  <%= link_to "編集する",edit_application_path(application) %>
+  <%= link_to "編集する","/applications/#{application.id}/edit?x=5" %>
 <% end %>
