@@ -5,5 +5,6 @@
 <% @applications.each do |application| %>
   <%= application.title %><br>
   <%= application.reason %><br>
-  <%= link_to "編集する","/applications/#{application.id}/edit?x=5" %>
+  <%= link_to "編集する","/applications/#{application.id}/edit?x=5" %><br>
+  <%= link_to "削除する", application_path(application.id),method: :delete%><br>
 <% end %>
