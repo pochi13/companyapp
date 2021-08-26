@@ -38,6 +38,13 @@ class ApplicationsController < ApplicationController
     end
   end
 
+  def destroy
+    application = Application.find(params[:id])
+    if application.destroy
+      redirect_to applications_path,notice: "削除完了しました" 
+   end
+  end
+
 
 
   private
