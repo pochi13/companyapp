@@ -1,0 +1,7 @@
+投稿完了しました
+
+<% @applications.each do |application| %>
+  <%= application.title %><br>
+  <%= application.reason %><br>
+  <%= link_to "編集する",edit_application_path(application) %>
+<% end %>

@@ -3,8 +3,7 @@
 <div class = container>
 
 <% @companies.each do |company|%>
-<%= company.name %><br>
-<%= link_to "company.name",company_path(company.id) %>
+<%= link_to company.name,company_path(company.id) %><br>
 <%= company.introduce %><br>
 <% end %>
 
