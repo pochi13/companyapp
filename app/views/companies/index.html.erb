@@ -3,11 +3,16 @@
 <%= "病院一覧画面" %>
 
 <div class = container>
-
-<% @companies.each do |company|%>
-<%= image_tag "1.png" %><br>
-<%= link_to company.name,company_path(company.id) %><br>
-<%= company.introduce %><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <% @companies.each do |company|%>
+<%= image_tag "1.png" %>
+<%= link_to company.name,company_path(company.id) %>
+<%= company.introduce %>
 <% end %>
 
+    </div>
+  </div>
+</div>
 </div>
